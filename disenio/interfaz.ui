@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Principal</class>
- <widget class="QWidget" name="Principal">
+ <class>ventanaPrincipal</class>
+ <widget class="QWidget" name="ventanaPrincipal">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>771</width>
+    <width>821</width>
     <height>498</height>
    </rect>
   </property>
@@ -80,12 +80,39 @@ QPushButton:hover{
       <property name="palette">
        <palette>
         <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
            </color>
           </brush>
          </colorrole>
@@ -104,17 +131,53 @@ QPushButton:hover{
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="NoBrush">
+           <color alpha="128">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
            </color>
           </brush>
          </colorrole>
         </active>
         <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
            </color>
           </brush>
          </colorrole>
@@ -133,17 +196,53 @@ QPushButton:hover{
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="NoBrush">
+           <color alpha="128">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
            </color>
           </brush>
          </colorrole>
         </inactive>
         <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
            </color>
           </brush>
          </colorrole>
@@ -162,6 +261,15 @@ QPushButton:hover{
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="NoBrush">
+           <color alpha="128">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
            </color>
           </brush>
          </colorrole>
@@ -171,12 +279,18 @@ QPushButton:hover{
       <property name="focusPolicy">
        <enum>Qt::StrongFocus</enum>
       </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white</string>
+      </property>
       <property name="text">
-       <string/>
+       <string>Menú</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>iconos/menu.png</normaloff>iconos/menu.png</iconset>
+        <normaloff>../iconos/menu.png</normaloff>../iconos/menu.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -343,7 +457,7 @@ color:rgb(0,0,0);
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="btnAlfabetos">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -351,12 +465,12 @@ color:rgb(0,0,0);
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Alfabetos</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="btnLenguajes">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -364,7 +478,7 @@ color:rgb(0,0,0);
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Lenguajes</string>
            </property>
           </widget>
          </item>
@@ -897,7 +1011,7 @@ background-color:white;
            <property name="currentIndex">
             <number>0</number>
            </property>
-           <widget class="QWidget" name="paginaUno">
+           <widget class="QWidget" name="paginaAlfabetos">
             <property name="styleSheet">
              <string notr="true">QLineEdit{
 border-radius:20px;
@@ -908,9 +1022,15 @@ border-radius:20px;
 background-color: rgb(245, 121, 0);
 }
 QLineEdit:hover{
-border:1px solid rgb(245, 121, 0);}</string>
+border:1px solid rgb(245, 121, 0);
+}
+
+QPlainTextEdit{
+background-color:white;
+}
+</string>
             </property>
-            <widget class="QLineEdit" name="lineEdit">
+            <widget class="QLineEdit" name="lineEditConjuntoA">
              <property name="geometry">
               <rect>
                <x>130</x>
@@ -926,7 +1046,7 @@ border:1px solid rgb(245, 121, 0);}</string>
               <bool>true</bool>
              </property>
             </widget>
-            <widget class="QLineEdit" name="lineEdit_2">
+            <widget class="QLineEdit" name="lineEditConjuntoB">
              <property name="geometry">
               <rect>
                <x>130</x>
@@ -939,7 +1059,7 @@ border:1px solid rgb(245, 121, 0);}</string>
               <bool>true</bool>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="btnUnion">
              <property name="geometry">
               <rect>
                <x>90</x>
@@ -949,10 +1069,10 @@ border:1px solid rgb(245, 121, 0);}</string>
               </rect>
              </property>
              <property name="text">
-              <string>PushButton</string>
+              <string>Unión</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_7">
+            <widget class="QPushButton" name="btninterseccion">
              <property name="geometry">
               <rect>
                <x>250</x>
@@ -962,10 +1082,10 @@ border:1px solid rgb(245, 121, 0);}</string>
               </rect>
              </property>
              <property name="text">
-              <string>PushButton</string>
+              <string>Intersección</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_8">
+            <widget class="QPushButton" name="btnDiferencia">
              <property name="geometry">
               <rect>
                <x>410</x>
@@ -975,7 +1095,7 @@ border:1px solid rgb(245, 121, 0);}</string>
               </rect>
              </property>
              <property name="text">
-              <string>PushButton</string>
+              <string>Diferencia</string>
              </property>
             </widget>
             <widget class="QPushButton" name="pushButton_9">
@@ -988,11 +1108,21 @@ border:1px solid rgb(245, 121, 0);}</string>
               </rect>
              </property>
              <property name="text">
-              <string>PushButton</string>
+              <string>Cerradura</string>
+             </property>
+            </widget>
+            <widget class="QPlainTextEdit" name="plainTextResultados">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>290</y>
+               <width>691</width>
+               <height>141</height>
+              </rect>
              </property>
             </widget>
            </widget>
-           <widget class="QWidget" name="page_2"/>
+           <widget class="QWidget" name="paginaLenguajes"/>
           </widget>
          </item>
         </layout>
