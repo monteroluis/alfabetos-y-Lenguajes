@@ -16,6 +16,7 @@ class Principal(QtWidgets.QWidget):
         self.ui.btnDiferencia.clicked.connect(self.resdiferencia)
         self.ui.btnAlfabetos.clicked.connect(lambda :self.ui.stackedWidget.setCurrentWidget(self.ui.paginaAlfabetos))
         self.ui.btnLenguajes.clicked.connect(lambda :self.ui.stackedWidget.setCurrentWidget(self.ui.paginaLenguajes))
+
     def transicionLateral(self):
         if True:
             width = self.ui.frameLateral.width()
@@ -33,16 +34,19 @@ class Principal(QtWidgets.QWidget):
         self.animacion.start()
 
     def mostrarDatos(self):
-        alfabeto=Alfabeto(self.ui.lineEditConjuntoA.text().split(),self.ui.lineEditConjuntoB.text().split())
-        self.ui.plainTextResultados.setPlainText(alfabeto.mostrarDatos(alfabeto.union()))
+        alfabeto1=Alfabeto(self.ui.lineEditConjuntoA.text().split())
+        alfabeto2 = Alfabeto(self.ui.lineEditConjuntoB.text().split())
+        self.ui.plainTextResultados.setPlainText(str(alfabeto1.union(alfabeto2.getConjunto())))
 
     def resinterseccion(self):
-        alfabeto = Alfabeto(self.ui.lineEditConjuntoA.text().split(), self.ui.lineEditConjuntoB.text().split())
-        self.ui.plainTextResultados.setPlainText(alfabeto.mostrarDatos(alfabeto.intersección()))
+        alfabeto1 = Alfabeto(self.ui.lineEditConjuntoA.text().split())
+        alfabeto2 = Alfabeto(self.ui.lineEditConjuntoB.text().split())
+        self.ui.plainTextResultados.setPlainText(str(alfabeto1.intersección(alfabeto2.getConjunto())))
 
     def resdiferencia(self):
-        alfabeto = Alfabeto(self.ui.lineEditConjuntoA.text().split(), self.ui.lineEditConjuntoB.text().split())
-        self.ui.plainTextResultados.setPlainText(alfabeto.mostrarDatos(alfabeto.diferencia()))
+        alfabeto1 = Alfabeto(self.ui.lineEditConjuntoA.text().split())
+        alfabeto2 = Alfabeto(self.ui.lineEditConjuntoB.text().split())
+        self.ui.plainTextResultados.setPlainText(str(alfabeto1.diferencia(alfabeto2.getConjunto())))
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

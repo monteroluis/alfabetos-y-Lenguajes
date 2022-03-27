@@ -1,18 +1,10 @@
-from clases.Alfabeto import Alfabeto
-from disenio.interfaz import *
+import random
+from clases.Alfabeto import *
 from Principal import *
+from clases.Lenguaje import Lenguaje
 
 conjuntoA=input("digite conjunto A")
 conjuntoB=input("digite conjunto B")
-papa=Alfabeto(conjuntoA.split(),conjuntoB.split())
-
-print(papa.mostrarDatos(papa.union()))
-
-alfabeto = Alfabeto(ui.lineEditConjuntoA.text().split(), ui.lineEditConjuntoB.text().split())
-ui.plainTextResultados.setPlainText(alfabeto.mostrarDatos(alfabeto.union()))
-
-
-
-
-
-
+papa=Lenguaje(conjuntoA.split())
+mama=Lenguaje(conjuntoB.split())
+print(papa.concatenacion(mama.getConjunto()))

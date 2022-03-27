@@ -1,49 +1,25 @@
-import sys
-from builtins import super
-
-from PyQt5.QtCore import QPropertyAnimation
-
-from clases.Caracter import Caracter
-from disenio.interfaz import *
+from typing import overload
 
 
-class Alfabeto(Caracter):
+class Alfabeto():
 
-    def __init__(self,conjuntoA,conjuntoB):
-        self.conjuntoA = set(conjuntoA)
-        self.conjuntoB = set(conjuntoB)
+    def __init__(self, conjunto):
+        self.conjunto = set(conjunto)
 
-    def getConjuntoA(self):
-        return self.conjuntoA
+    def getConjunto(self):
+        return set(self.conjunto)
 
-    def getConjuntoB(self):
-        return self.conjuntoB
+    def setConjunto(self):
+        return self.conjunto
 
-    def union(self):
-      return self.conjuntoA.union(self.conjuntoB)
+    def union(self, conjuntoB):
+        return Alfabeto(self.conjunto.union(conjuntoB))
 
-    def intersección(self):
-        return self.conjuntoA.intersection(self.conjuntoB)
+    def intersección(self, conjuntoB):
+        return Alfabeto(self.conjunto.intersection(conjuntoB))
 
-    def diferencia (self):
-        return self.conjuntoA.difference(self.conjuntoB)
+    def diferencia(self, conjuntoB):
+        return Alfabeto(self.conjunto.difference(conjuntoB))
 
-    def mostrarDatos(self, conjunto):
-     text=''
-     for dato in conjunto:
-       text +=' '+dato
-
-     if text=='':
-         return '{ }'
-     else:
-         return text
-
-
-
-
-
-
-
-
-
-
+    def __str__(self):
+        return '{' + ','.join(self.conjunto) + '}'
