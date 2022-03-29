@@ -1,8 +1,10 @@
 import sys
 from PyQt5.QtCore import QPropertyAnimation
-
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QGraphicsDropShadowEffect
 from clases.Alfabeto import Alfabeto
 from disenio.interfaz import *
+
 
 class Principal(QtWidgets.QWidget):
 
@@ -10,15 +12,24 @@ class Principal(QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self, parent)
         self.ui = Ui_ventanaPrincipal()
         self.ui.setupUi(self)
+
+        self.sombra(self.ui.btnLenguajes)
+        self.sombra(self.ui.btnAlfabetos)
+        self.sombra(self.ui.pushButton_4)
+        self.sombra(self.ui.pushButton_5)
+        self.sombra(self.ui.pushButton_6)
+        self.sombra(self.ui.btnAlfabetos)
         self.ui.btnMenu.clicked.connect(self.transicionLateral)
         self.ui.btnUnion.clicked.connect(self.mostrarDatos)
         self.ui.btninterseccion.clicked.connect(self.resinterseccion)
         self.ui.btnDiferencia.clicked.connect(self.resdiferencia)
+        #self.ui.btnCerradura.clicked.connect(self.)
         self.ui.btnAlfabetos.clicked.connect(lambda :self.ui.stackedWidget.setCurrentWidget(self.ui.paginaAlfabetos))
         self.ui.btnLenguajes.clicked.connect(lambda :self.ui.stackedWidget.setCurrentWidget(self.ui.paginaLenguajes))
 
     def transicionLateral(self):
         if True:
+
             width = self.ui.frameLateral.width()
             normal = 0
 
@@ -33,7 +44,16 @@ class Principal(QtWidgets.QWidget):
         self.animacion.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.animacion.start()
 
+    def sombra(self,frame):
+        sombra=QGraphicsDropShadowEffect(self)
+        sombra.setBlurRadius(30)
+        sombra.setXOffset(6)
+        sombra.setYOffset(6)
+        sombra.setColor(QColor(245, 121, 0))
+        frame.setGraphicsEffect(sombra)
+
     def mostrarDatos(self):
+
         alfabeto1=Alfabeto(self.ui.lineEditConjuntoA.text().split())
         alfabeto2 = Alfabeto(self.ui.lineEditConjuntoB.text().split())
         self.ui.plainTextResultados.setPlainText(str(alfabeto1.union(alfabeto2.getConjunto())))

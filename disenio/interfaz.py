@@ -15,8 +15,11 @@ class Ui_ventanaPrincipal(object):
     def setupUi(self, ventanaPrincipal):
         ventanaPrincipal.setObjectName("ventanaPrincipal")
         ventanaPrincipal.resize(821, 498)
-        ventanaPrincipal.setStyleSheet("\n"
-"border:0px\n"
+        ventanaPrincipal.setMaximumSize(QtCore.QSize(821, 498))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("./iconos/languages.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        ventanaPrincipal.setWindowIcon(icon)
+        ventanaPrincipal.setStyleSheet("border:0px\n"
 "")
         self.verticalLayout = QtWidgets.QVBoxLayout(ventanaPrincipal)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -28,8 +31,11 @@ class Ui_ventanaPrincipal(object):
         self.Superior.setStyleSheet("QFrame,QPushButton{\n"
 "background-color:Black;\n"
 "}\n"
+"QPushButton{\n"
+" border:2px solid white;\n"
+"}\n"
 "QPushButton:hover{\n"
-"    background-color:rgb(228, 106, 18);\n"
+"  background-color:rgb(245, 121, 0);\n"
 "}")
         self.Superior.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.Superior.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -104,10 +110,13 @@ class Ui_ventanaPrincipal(object):
         self.btnMenu.setPalette(palette)
         self.btnMenu.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.btnMenu.setAutoFillBackground(False)
-        self.btnMenu.setStyleSheet("color:white")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../iconos/menu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btnMenu.setIcon(icon)
+        self.btnMenu.setStyleSheet("QPushButtom{\n"
+"color:white;\n"
+"border-bottom:1px solid white;\n"
+"}")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("./iconos/menu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btnMenu.setIcon(icon1)
         self.btnMenu.setIconSize(QtCore.QSize(40, 40))
         self.btnMenu.setObjectName("btnMenu")
         self.verticalLayout.addWidget(self.Superior)
@@ -124,46 +133,47 @@ class Ui_ventanaPrincipal(object):
         self.frameLateral.setMinimumSize(QtCore.QSize(0, 0))
         self.frameLateral.setMaximumSize(QtCore.QSize(0, 16777215))
         palette = QtGui.QPalette()
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(197, 73, 25))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         self.frameLateral.setPalette(palette)
         self.frameLateral.setStyleSheet("QFrame{\n"
-"background-color:rgb(197, 73, 25)\n"
+"background-color:black;\n"
 "}\n"
 "QPushButton{\n"
-"background-color:rgb(61,61,61);\n"
-"border-top-left-radius:20px;\n"
-"border-bottom-left-radius:20px;\n"
+"border:1px solid white;\n"
+"border-radius:20px;\n"
 "color:rgb(255,255,255);\n"
-"\n"
+"}\n"
+"QFrame:hover{\n"
+"border-top:1 px solid white;\n"
 "}\n"
 "QPushButton:hover{\n"
-"background-color:white;\n"
+"background-color:rgb(245, 121, 0);\n"
 "color:rgb(0,0,0);\n"
 "}")
         self.frameLateral.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -171,6 +181,10 @@ class Ui_ventanaPrincipal(object):
         self.frameLateral.setObjectName("frameLateral")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frameLateral)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
+        spacerItem = QtWidgets.QSpacerItem(229, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout_2.addItem(spacerItem)
+        spacerItem1 = QtWidgets.QSpacerItem(229, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout_2.addItem(spacerItem1)
         self.btnAlfabetos = QtWidgets.QPushButton(self.frameLateral)
         self.btnAlfabetos.setMinimumSize(QtCore.QSize(0, 40))
         self.btnAlfabetos.setObjectName("btnAlfabetos")
@@ -191,6 +205,25 @@ class Ui_ventanaPrincipal(object):
         self.pushButton_6.setMinimumSize(QtCore.QSize(0, 40))
         self.pushButton_6.setObjectName("pushButton_6")
         self.verticalLayout_2.addWidget(self.pushButton_6)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 74, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem2)
+        self.pushButton_8 = QtWidgets.QPushButton(self.frameLateral)
+        self.pushButton_8.setStyleSheet("QPushButton{\n"
+"border:0px;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:rgba(191, 64, 64, 0);\n"
+"color:white;\n"
+"}")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("./iconos/logo unimag.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_8.setIcon(icon2)
+        self.pushButton_8.setIconSize(QtCore.QSize(40, 40))
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.verticalLayout_2.addWidget(self.pushButton_8)
+        spacerItem3 = QtWidgets.QSpacerItem(229, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.verticalLayout_2.addItem(spacerItem3)
         self.horizontalLayout.addWidget(self.frameLateral)
         self.paginas = QtWidgets.QFrame(self.inferior)
         self.paginas.setStyleSheet("")
@@ -368,11 +401,14 @@ class Ui_ventanaPrincipal(object):
 "background-color: rgb(245, 121, 0);\n"
 "}\n"
 "QLineEdit:hover{\n"
+"border:-1px;\n"
 "border:1px solid rgb(245, 121, 0);\n"
 "}\n"
-"\n"
 "QPlainTextEdit{\n"
 "background-color:white;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border-radius:30px rgb(245, 121, 0);\n"
 "}\n"
 "")
         self.paginaAlfabetos.setObjectName("paginaAlfabetos")
@@ -387,22 +423,72 @@ class Ui_ventanaPrincipal(object):
         self.lineEditConjuntoB.setObjectName("lineEditConjuntoB")
         self.btnUnion = QtWidgets.QPushButton(self.paginaAlfabetos)
         self.btnUnion.setGeometry(QtCore.QRect(90, 210, 131, 41))
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.btnUnion.setFont(font)
         self.btnUnion.setObjectName("btnUnion")
         self.btninterseccion = QtWidgets.QPushButton(self.paginaAlfabetos)
         self.btninterseccion.setGeometry(QtCore.QRect(250, 210, 131, 41))
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setWeight(50)
+        self.btninterseccion.setFont(font)
         self.btninterseccion.setObjectName("btninterseccion")
         self.btnDiferencia = QtWidgets.QPushButton(self.paginaAlfabetos)
         self.btnDiferencia.setGeometry(QtCore.QRect(410, 210, 131, 41))
+        font = QtGui.QFont()
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.btnDiferencia.setFont(font)
         self.btnDiferencia.setObjectName("btnDiferencia")
         self.pushButton_9 = QtWidgets.QPushButton(self.paginaAlfabetos)
         self.pushButton_9.setGeometry(QtCore.QRect(560, 210, 131, 41))
         self.pushButton_9.setObjectName("pushButton_9")
         self.plainTextResultados = QtWidgets.QPlainTextEdit(self.paginaAlfabetos)
-        self.plainTextResultados.setGeometry(QtCore.QRect(50, 290, 691, 141))
+        self.plainTextResultados.setGeometry(QtCore.QRect(60, 290, 691, 141))
         self.plainTextResultados.setObjectName("plainTextResultados")
         self.stackedWidget.addWidget(self.paginaAlfabetos)
         self.paginaLenguajes = QtWidgets.QWidget()
+        self.paginaLenguajes.setStyleSheet("QLineEdit{\n"
+"border-radius:20px;\n"
+"padding-left:20px;\n"
+"}\n"
+"QPushButton{\n"
+"border-radius:20px;\n"
+"background-color: rgb(245, 121, 0);\n"
+"}\n"
+"QLineEdit:hover{\n"
+"border:1px solid rgb(245, 121, 0);\n"
+"}\n"
+"\n"
+"QPlainTextEdit{\n"
+"background-color:white;\n"
+"}")
         self.paginaLenguajes.setObjectName("paginaLenguajes")
+        self.pushButton = QtWidgets.QPushButton(self.paginaLenguajes)
+        self.pushButton.setGeometry(QtCore.QRect(260, 200, 121, 20))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.paginaLenguajes)
+        self.pushButton_2.setGeometry(QtCore.QRect(120, 190, 121, 41))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.paginaLenguajes)
+        self.pushButton_3.setGeometry(QtCore.QRect(440, 200, 80, 25))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_7 = QtWidgets.QPushButton(self.paginaLenguajes)
+        self.pushButton_7.setGeometry(QtCore.QRect(570, 200, 80, 25))
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.lineEdit = QtWidgets.QLineEdit(self.paginaLenguajes)
+        self.lineEdit.setGeometry(QtCore.QRect(140, 50, 461, 25))
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.paginaLenguajes)
+        self.lineEdit_2.setGeometry(QtCore.QRect(120, 110, 521, 41))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.paginaLenguajes)
+        self.plainTextEdit.setGeometry(QtCore.QRect(110, 260, 571, 171))
+        self.plainTextEdit.setObjectName("plainTextEdit")
         self.stackedWidget.addWidget(self.paginaLenguajes)
         self.verticalLayout_3.addWidget(self.stackedWidget)
         self.horizontalLayout.addWidget(self.paginas)
@@ -414,17 +500,24 @@ class Ui_ventanaPrincipal(object):
 
     def retranslateUi(self, ventanaPrincipal):
         _translate = QtCore.QCoreApplication.translate
-        ventanaPrincipal.setWindowTitle(_translate("ventanaPrincipal", "Form"))
+        ventanaPrincipal.setWindowTitle(_translate("ventanaPrincipal", "Alphabet"))
         self.btnMenu.setText(_translate("ventanaPrincipal", "Menú"))
         self.btnAlfabetos.setText(_translate("ventanaPrincipal", "Alfabetos"))
         self.btnLenguajes.setText(_translate("ventanaPrincipal", "Lenguajes"))
         self.pushButton_4.setText(_translate("ventanaPrincipal", "PushButton"))
         self.pushButton_5.setText(_translate("ventanaPrincipal", "PushButton"))
         self.pushButton_6.setText(_translate("ventanaPrincipal", "PushButton"))
+        self.pushButton_8.setText(_translate("ventanaPrincipal", "Unimagdalena"))
+        self.lineEditConjuntoA.setPlaceholderText(_translate("ventanaPrincipal", "ingrese alfabeto"))
+        self.lineEditConjuntoB.setPlaceholderText(_translate("ventanaPrincipal", "ingrese alfabeto"))
         self.btnUnion.setText(_translate("ventanaPrincipal", "Unión"))
         self.btninterseccion.setText(_translate("ventanaPrincipal", "Intersección"))
         self.btnDiferencia.setText(_translate("ventanaPrincipal", "Diferencia"))
         self.pushButton_9.setText(_translate("ventanaPrincipal", "Cerradura"))
+        self.pushButton.setText(_translate("ventanaPrincipal", "PushButton"))
+        self.pushButton_2.setText(_translate("ventanaPrincipal", "PushButton"))
+        self.pushButton_3.setText(_translate("ventanaPrincipal", "PushButton"))
+        self.pushButton_7.setText(_translate("ventanaPrincipal", "PushButton"))
 
 
 if __name__ == "__main__":
